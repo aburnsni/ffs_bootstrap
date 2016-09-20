@@ -1,5 +1,5 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php  dpm($node); ?>
+  <?php  //dpm($node); ?>
   <?php if ($teaser) { ?>
     <div class="flyer flyer-<?php print $node->nid; ?>">
       <a href="<?php print $node_url; ?>">

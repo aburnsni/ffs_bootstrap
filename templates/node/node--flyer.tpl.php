@@ -1,11 +1,15 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php // dpm($node); ?>
+  <?php  dpm($node); ?>
   <?php if ($teaser) { ?>
     <div class="flyer flyer-<?php print $node->nid; ?>">
       <a href="<?php print $node_url; ?>">
-        <img src="<?php print image_style_url('flyer_thumbnail',$node->field_image['und'][0]['uri']); ?>">
+        <?php if (!$node->field_thumbnail['und'][0]['value']) { ?>
+          <img src="<?php print image_style_url('flyer_thumbnail',$node->field_image['und'][0]['uri']); ?>" alt="<php $title; ?>">
+        <?php } else { 
+          print render($content['field_file'][0]);
+        } ?>
         <div class="flyer-title">
-          <header><h3><?php print $title; ?></h3></header>
+          <h3><?php print $title; ?></h3>
         </div>
       </a>
       <?php
@@ -16,44 +20,31 @@
     </div>
   <?php } else { ?>
     <div class="content"<?php print $content_attributes; ?>>
-      <div class="col-sm-4">
-        <div class="flyer">
-        <a class="colorbox-load" href="<?php print file_create_url($node->field_image['und'][0]['uri']); ?>"
-          data-colorbox-gallery="gallery-node-<?php print $node->nid; ?>" title="<?php print $title; ?>">
-          <img src="<?php print image_style_url('large',$node->field_image['und'][0]['uri']); ?>">
-        </a>
-        </div>
-      </div>
-      <?php if ($node->field_image['und'][1]['uri']) { ?>
+      <?php $n=0;
+      while ($node->field_image['und'][$n]['fid']) { ?>
         <div class="col-sm-4">
           <div class="flyer">
-          <a class="colorbox-load" href="<?php print file_create_url($node->field_image['und'][1]['uri']); ?>"
+          <a class="colorbox-load" href="<?php print file_create_url($node->field_image['und'][$n]['uri']); ?>"
             data-colorbox-gallery="gallery-node-<?php print $node->nid; ?>" title="<?php print $title; ?>">
-            <img src="<?php print image_style_url('large',$node->field_image['und'][1]['uri']); ?>">
+            <img src="<?php print image_style_url('large',$node->field_image['und'][$n]['uri']); ?>">
           </a>
           </div>
         </div>
+        <?php $n++;
+      } ?>
+      <?php if ($node-> field_file['und'][0]['fid']): ?>
         <div class="col-sm-4">
-      <?php } else { ?>
-        <div class="col-sm-8">
-      <?php } ?>
+          <a href="<?php print file_create_url($node->field_file['und'][0]['uri']); ?>" title="<?php print ($node->field_file['und'][0]['description']); ?>">
+            <?php print render($content['field_file'][0]); ?>
+            <div class="small text-center">(Click to download)</div>
+          </a>
+        </div>
+      <?php endif; ?>
+      <div class="col-sm-8">
         <?php if ($node->body): ?>
-          <div><?php print render($node->body['und'][0]['value']); ?></div>
+          <div><?php print render($body['und'][0]['value']); ?></div>
         <?php endif; ?>
-        <?php if ($node->field_file): ?>
-          <div><strong>Download:&nbsp;</strong>
-            <a href="<?php print file_create_url($node->field_file['und'][0]['uri']); ?>">
-              <?php
-                if ($node->field_file['und'][0]['description']) {
-                  print render($node->field_file['und'][0]['description']);
-                } else {
-                  print render($node->field_file['und'][0]['filename']);
-                }
-              ?>
-            </a>
-          </div>
-        <?php endif; ?>
-      </div>
+       </div>
     </div>
     <?php print render($content['links']); ?>
   <?php } ?>

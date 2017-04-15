@@ -13,7 +13,7 @@
 
     background-image: url("../images/banner432.png");
     height: 114px;
-    div {
+    >div {
         width: 100%;
         height: 100%;
         padding: 15px 15px;
@@ -29,13 +29,16 @@
             -webkit-fill-color: #FFFFFF;
             text-shadow: 1px 0px 20px blue;
         }
+        #special-header {
+            background: transparent;
+        }
     }
     @media (min-width: @screen-xs-min) {
         /* rules for tablet (768 > 992) */
 
         background-image: url("../images/banner720.png");
         height: 189px;
-        div {
+        >div {
             background: transparent url('../images/logo720.png') no-repeat scroll 99% 95%;
         }
     }
@@ -44,7 +47,7 @@
 
         background-image: url("../images/banner940.png");
         height: 247px;
-        div {
+        >div {
             background: transparent url('../images/logo940.png') no-repeat scroll 99% 95%;
             h1 {
                 font-size: @font-size-h2;
@@ -56,7 +59,7 @@
 
         background-image: url("../images/banner1140.png");
         height: 300px;
-        div {
+        >div {
             background: transparent url('../images/logo1140.png') no-repeat scroll 99% 95%;
             h1 {
                 font-size: @font-size-h1;

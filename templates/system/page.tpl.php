@@ -49,7 +49,11 @@
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
-    <div><h1>FLEMING FULTON SCHOOL</h1></div>
+	<div>
+            <div id="special-header">
+                <h1>FLEMING FULTON SCHOOL</h1>
+            </div>
+	</div>
   </header> <!-- /#page-header -->
 
   <div class="row">

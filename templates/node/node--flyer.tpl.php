@@ -1,13 +1,13 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php  //dpm($node); ?>
   <?php if ($teaser) { ?>
-    <div class="flyer flyer-<?php print $node->nid; ?>">
+    <div class="flyer flyer-<?php print $node->nid; ?> center-block">
       <a href="<?php print $node_url; ?>">
-        <?php if (!$node->field_thumbnail['und'][0]['value']) { ?>
-          <img src="<?php print image_style_url('flyer_thumbnail',$node->field_image['und'][0]['uri']); ?>" alt="<php $title; ?>">
-        <?php } else { 
-          print render($content['field_file'][0]);
-        } ?>
+          <?php if (!$node->field_thumbnail['und'][0]['value']) { ?>
+            <img src="<?php print image_style_url('flyer_thumbnail',$node->field_image['und'][0]['uri']); ?>" alt="<php $title; ?>">
+          <?php } else { 
+            print render($content['field_file'][0]);
+          } ?>
         <div class="flyer-title">
           <h3><?php print $title; ?></h3>
         </div>

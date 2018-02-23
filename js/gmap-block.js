@@ -10,7 +10,8 @@ function initialize() {
             mapTypeControl: 0,
             zoomControl: 0,
             scrollwheel: 0,
-            streetViewControl: 0
+            streetViewControl: 0,
+            fullscreenControl: 0
         },
         map = new google.maps.Map(document.getElementById('map-canvas-block'), mapOptions),
         marker = new google.maps.Marker({

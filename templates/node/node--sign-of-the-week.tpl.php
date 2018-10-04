@@ -4,7 +4,7 @@
 
   <?php print render($title_prefix); ?>
   <?php if (!$page && $title): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <h2<?php print $title_attributes; ?> class="text-center"><?php print $title; ?></h2>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
@@ -23,10 +23,10 @@
       hide($content['field_symbol']);
       hide($content['field_sign']);
       print "<div class='row'>";
-      print "<div class='col-xs-12 col-md-6'>";
+      print "<div class='col-xs-12 col-sm-6 text-center' style='padding: 15px'>";
       print render($content['field_symbol']);
       print "</div>";
-      print "<div class='col-xs-12 col-md-6'>";
+      print "<div class='col-xs-12 col-sm-6 text-center' style='padding:15px'>";
       print render($content['field_sign']);
       print "</div>";
       print "</div>";

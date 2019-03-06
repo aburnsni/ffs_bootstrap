@@ -42,10 +42,10 @@ ol.breadcrumb {
 
 // Correct link color when used within btn
 .btn-primary {
-  margin-left: @padding-small-horizontal;
-  &.first {
-    margin-left: 0;
-  }
+//   margin-left: @padding-small-horizontal;
+//   &.first {
+//     margin-left: 0;
+//   }
   a {
     color: @gray-lighter;
   }
@@ -130,8 +130,8 @@ video {
   }
 }
 
-// Twitter Panel
-.pane-twitter-block-1, #ye-panel {
+// Twitter Panel .pane-twitter-block-1
+#ye-panel {
   .pane-title {
     display:none;
   }
@@ -196,3 +196,18 @@ video {
     margin-top: 10px;
   }
 }
+
+// .img-responsive max-width messing with bootstrap media blocks
+.media-left > .img-responsive, .media-right > .img-responsive {
+ max-width: none;
+}
+
+// Align post count and taxonomy group on department pages
+// .tagclouds-term {
+//   a {
+//     float: left !important;
+//   }
+//   .badge {
+//     float: right !important;
+//   }
+// }

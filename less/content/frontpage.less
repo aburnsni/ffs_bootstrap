@@ -1,64 +1,81 @@
-#fp-welcome {
-  border-radius: 20px;
-  padding: 20px;
-  background-image: url(../images/house1170.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top center;
-  background-size: cover;
-  .well {
+body.front {
+  #fp-welcome {
+    border-radius: 20px;
+    padding: 20px;
+    background-image: url(../images/house1170.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    .well {
+      background: rgba(245, 245, 245, 0.9);
+      border: 1px solid rgba(227, 227, 227, 0.9);
+    }
+    .pane-title {
+      text-align:center;
+    }
+
+    @media (min-width: @screen-xs-min) {
+      border-radius: 40px;
+      padding: 40px;
+    }
+
+    @media (min-width: @screen-xs-min) {
+      border-radius: 50px;
+      padding: 50px;
+    }
+
+    @media (min-width: @screen-md-min) {
+      border-radius: 60px;
+      padding: 60px;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      border-radius: 80px;
+      padding: 80px;
+    }
+  }
+
+  div.row.col2-mid {
+    background-image: url(../images/mural1170.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding-top: 20px;
+  }
+
+  .col2-mid-left, .col-2-mid-right {
     background: rgba(245, 245, 245, 0.9);
     border: 1px solid rgba(227, 227, 227, 0.9);
   }
-  .pane-title {
-    text-align:center;
-  }
 
-  @media (min-width: @screen-xs-min) {
-    border-radius: 40px;
-    padding: 40px;
-  }
-
-  @media (min-width: @screen-xs-min) {
-    border-radius: 50px;
-    padding: 50px;
-  }
-
-  @media (min-width: @screen-md-min) {
-    border-radius: 60px;
-    padding: 60px;
-  }
-
-  @media (min-width: @screen-lg-min) {
-    border-radius: 80px;
-    padding: 80px;
-  }
-}
-
-div.row.col2-mid {
-  background-image: url(../images/mural1170.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  padding-top: 20px;
-}
-
-.col2-mid-left, .col-2-mid-right {
-  background: rgba(245, 245, 245, 0.9);
-  border: 1px solid rgba(227, 227, 227, 0.9);
-}
-
-#views-bootstrap-media-1 {
-  padding-top: 12px;
-  .media-body {
-    .btn {
-      margin-top:8px;
+  #views-bootstrap-media-1 {
+    padding-top: 12px;
+    .media-body {
+      .btn {
+        margin-top:8px;
+      }
     }
   }
-}
-.pane-find-and-search {
-  .panels-flexible-region-18-center {
-    width:100%;
+  .pane-find-and-search {
+    .panels-flexible-region-18-center {
+      width:100%;
+    }
+  }
+
+  .list-group-item {
+    h3.field-content {
+      margin-top: 11px;
+    }
+    .views-field-field-department {
+      margin-top: 11px;
+    }
+  }
+
+  .view-latest {
+    .pagination {
+      margin-top: 0px;
+    }
   }
 }

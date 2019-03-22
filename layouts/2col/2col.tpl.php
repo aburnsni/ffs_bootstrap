@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="col-md-6 col-sm-12">
-      <div class="well col2-mid-left">
+      <div class="well col2-mid-right">
         <?php if (@$panelcontentfilled[1]):
           print $panelcontentfilled[1];
           endif; ?>

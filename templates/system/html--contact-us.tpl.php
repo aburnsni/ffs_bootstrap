@@ -12,7 +12,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYOcSOCi__DSWg6jJvKdex1A8cKBM_iI0&v=3.exp&signed_in=true"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYOcSOCi__DSWg6jJvKdex1A8cKBM_iI0"></script>
   <script src=<?php print (drupal_get_path('theme', 'fleming') . '/js/gmap-large.js');?>></script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>

@@ -13,14 +13,14 @@ function initialize() {
             streetViewControl: 0,
             mapTypeControl: true,
             mapTypeControlOptions: {
-                style: google.maps.MapTypeControlStyle.DEFAULT,
-                mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE]
+
             },
             zoomControl: true,
             zoomControlOptions: {
                 style: google.maps.ZoomControlStyle.LARGE,
                 position: google.maps.ControlPosition.TOP_LEFT
-            }
+            },
+            controlSize: 25
         },
 
         map = new google.maps.Map(document.getElementById('map-canvas-large'), mapOptions),

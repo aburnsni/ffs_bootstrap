@@ -34,6 +34,21 @@
         print l($node->field_file['und'][$n]['description'],file_create_url($node->field_file['und'][$n]['uri']));
         print "</h3></div>";
         $n++;
+        $clearfixclass = '';
+        if ($n % 2 == 0) {
+          $clearfixclass .= "visible-xs-block ";
+        }
+        if ($n % 3 == 0) {
+          $clearfixclass .= "visible-sm-block ";
+        }
+        if ($n % 4 == 0) {
+          $clearfixclass .= "visible-md-block ";
+        }
+        if (strlen($clearfixclass) > 0) {
+          print "<div class='clearfix " . $clearfixclass . "'></div>";
+        }
+
+
       }
     ?>
   </div>

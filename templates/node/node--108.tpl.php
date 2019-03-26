@@ -42,13 +42,11 @@
           $clearfixclass .= "visible-sm-block ";
         }
         if ($n % 4 == 0) {
-          $clearfixclass .= "visible-md-block ";
+          $clearfixclass .= "visible-md-block visible-lg-block ";
         }
         if (strlen($clearfixclass) > 0) {
           print "<div class='clearfix " . $clearfixclass . "'></div>";
         }
-
-
       }
     ?>
   </div>

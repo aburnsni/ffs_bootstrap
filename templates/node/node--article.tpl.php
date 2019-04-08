@@ -33,7 +33,7 @@
 
   <?php } else { ?>
 
-    <?php  dpm($node); ?>
+    <?php  // dpm($node); ?>
     <?php print $user_picture; ?>
 
     <?php print render($title_prefix); ?>

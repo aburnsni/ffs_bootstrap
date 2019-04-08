@@ -51,4 +51,8 @@ jQuery(function ($) {
         //Hide required mark from masquerade form
         $('#masquerade-block-1 label').addClass("sr-only");
     });
+
+    $(function() {
+        $("button[name~='op']").attr('alt', 'Submit');
+    });
 });

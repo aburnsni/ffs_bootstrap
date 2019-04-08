@@ -1,4 +1,4 @@
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+<header id="navbar" class="<?php print $navbar_classes; ?>">
   <div class="container">
     <div class="navbar-header">
       <?php if ($logo): ?>
@@ -25,7 +25,7 @@
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div id="main-navbar" class="main-navbar-collapse navbar-collapse collapse">
-        <nav role="navigation">
+        <nav>
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
           <?php endif; ?>
@@ -43,7 +43,7 @@
 
 <div class="main-container container">
 
-  <header role="banner" id="page-header">
+  <header id="page-header">
     <?php if (!empty($site_slogan)): ?>
       <p class="lead"><?php print $site_slogan; ?></p>
     <?php endif; ?>

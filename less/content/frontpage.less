@@ -2,7 +2,7 @@ body.front {
   #fp-welcome {
     border-radius: 20px;
     padding: 20px;
-    background-image: url(../images/house1170.jpg);
+    background-image: url(../images/house750.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: top center;
@@ -21,28 +21,43 @@ body.front {
     }
 
     @media (min-width: @screen-xs-min) {
+      background-image: url(../images/house750.jpg);
       border-radius: 50px;
       padding: 50px;
     }
 
     @media (min-width: @screen-md-min) {
+      background-image: url(../images/house970.jpg);
       border-radius: 60px;
       padding: 60px;
     }
 
     @media (min-width: @screen-lg-min) {
+      background-image: url(../images/house1170.jpg);
       border-radius: 80px;
       padding: 80px;
     }
   }
 
   div.row.col2-mid {
-    background-image: url(../images/mural1170.jpg);
+    background-image: url(../images/mural750.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     padding-top: 20px;
+
+    @media (min-width: @screen-xs-min) {
+      background-image: url(../images/mural750.jpg);
+    }
+
+    @media (min-width: @screen-md-min) {
+      background-image: url(../images/mural970.jpg);
+    }
+
+    @media (min-width: @screen-lg-min) {
+      background-image: url(../images/mural1170.jpg);
+    }
   }
 
   .col2-mid-left, .col-2-mid-right {

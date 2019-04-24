@@ -38,35 +38,36 @@ body.front {
       padding: 80px;
     }
   }
-
-  div.row.col2-mid {
-    background-image: url(../images/mural750.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    padding-top: 20px;
-
-    @media (min-width: @screen-xs-min) {
+  #block-system-main {
+    div.row.col2-mid {
       background-image: url(../images/mural750.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      padding-top: 20px;
+
+      @media (min-width: @screen-xs-min) {
+        background-image: url(../images/mural750.jpg);
+      }
+
+      @media (min-width: @screen-md-min) {
+        background-image: url(../images/mural970.jpg);
+      }
+
+      @media (min-width: @screen-lg-min) {
+        background-image: url(../images/mural1170.jpg);
+      }
     }
 
-    @media (min-width: @screen-md-min) {
-      background-image: url(../images/mural970.jpg);
+    .col2-mid-left, .col2-mid-right {
+      background: rgba(245, 245, 245, 0.9);
+      border: 1px solid rgba(227, 227, 227, 0.9);
     }
-
-    @media (min-width: @screen-lg-min) {
-      background-image: url(../images/mural1170.jpg);
-    }
-  }
-
-  .col2-mid-left, .col2-mid-right {
-    background: rgba(245, 245, 245, 0.9);
-    border: 1px solid rgba(227, 227, 227, 0.9);
   }
 
   #views-bootstrap-media-1 {
-    padding-top: 12px;
+    padding-top: @padding-large-vertical;
     .media-body {
       .btn {
         margin-top:8px;
@@ -81,10 +82,10 @@ body.front {
 
   .list-group-item {
     h3.field-content {
-      margin-top: 11px;
+      margin-top: @padding-large-vertical;
     }
     .views-field-field-department {
-      margin-top: 11px;
+      margin-top: @padding-large-vertical;
     }
   }
 
@@ -92,5 +93,20 @@ body.front {
     .pagination {
       margin-top: 0px;
     }
+  }
+
+#mini-panel-find_and_search {
+  .col2-nowell-top {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+  .pane-1 {
+    margin-top: 20px;
+  }
+
+  #block-search-api-page-search-form {
+    width:90%;
   }
 }

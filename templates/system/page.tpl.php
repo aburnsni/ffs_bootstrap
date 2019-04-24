@@ -103,14 +103,16 @@
     </div>
   <?php endif; ?>
 </div>
-<footer class="footer container">
-  <div class="col-md-4 col-sm-12">
-    <?php print render($page['footer_left']); ?>
-  </div>
-  <div class="col-md-4 col-sm-6 col-xs-12">
-    <?php print render($page['footer_center']); ?>
-  </div>
-  <div class="col-md-4 col-sm-6 col-xs-12">
-    <?php print render($page['footer_right']); ?>
-  </div>
-</footer>
+<?php if ($user->uid > 0) { ?>
+  <footer class="footer container">
+    <div class="col-md-4 col-sm-12">
+      <?php print render($page['footer_left']); ?>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <?php print render($page['footer_center']); ?>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <?php print render($page['footer_right']); ?>
+    </div>
+  </footer>
+<?php } ?>

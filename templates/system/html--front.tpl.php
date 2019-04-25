@@ -23,7 +23,7 @@
     <?php print $page; ?>
     <?php print $page_bottom; ?>
   </div>
-<script>
+ <script>
 
 function initialize() {
     "use strict";
@@ -50,11 +50,31 @@ function initialize() {
     google.maps.event.addListener(marker, 'click', function () {
         window.location.href = marker.url;
     });
-
-}
-
-// google.maps.event.addDomListener(window, 'load', initialize);
+  }
+  // google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYOcSOCi__DSWg6jJvKdex1A8cKBM_iI0&amp;callback=initialize" defer></script>
+
+<script src="/sites/all/themes/fleming/js/jquery.backstretch.min.js"></script>
+  <script>
+    jQuery(function ($) {
+      $("#fp-welcome").backstretch([
+        [
+          { width: 1170, url: "/sites/all/themes/fleming/images/house1170.jpg", pixelRatio: "auto" },
+          { width: 970, url: "/sites/all/themes/fleming/images/house970.jpg", pixelRatio: "auto" },
+          { width: 750, url: "/sites/all/themes/fleming/images/house750.jpg", pixelRatio: "auto" }
+        ]
+      ]);
+      $(".col2-mid").backstretch([
+        [
+          { width: 1170, url: "/sites/all/themes/fleming/images/mural1170.jpg", pixelRatio: "auto" },
+          { width: 970, url: "/sites/all/themes/fleming/images/mural970.jpg", pixelRatio: "auto" },
+          { width: 750, url: "/sites/all/themes/fleming/images/mural750.jpg", pixelRatio: "auto" }
+        ]
+      ]);
+    });
+  </script>
+
+
 </body>
 </html>

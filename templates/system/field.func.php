@@ -49,6 +49,22 @@ function fleming_field__field_image_gallery(&$variables) {
   foreach ($variables['items'] as $delta => $item) {
     $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even') . (!$index ? ' first' : '');
     $output .= ($index ? '' : '') . '<div class="col-xs-6 col-sm-4 col-md-3 text-center ' . $classes . '"' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+    
+    $clearfixclass = '';
+    $n = $index + 1;
+    if ($n % 2 == 0) {
+      $clearfixclass .= "visible-xs-block ";
+    }
+    if ($n % 3 == 0) {
+      $clearfixclass .= "visible-sm-block ";
+    }
+    if ($n % 4 == 0) {
+      $clearfixclass .= "visible-md-block visible-lg-block ";
+    }
+    if (strlen($clearfixclass) > 0) {
+      $output .= '<div class="clearfix ' . $clearfixclass . '"></div>';
+    }
+    
     $index++;
   }
   $output .= '</div>';

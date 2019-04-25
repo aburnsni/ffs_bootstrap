@@ -7,6 +7,9 @@ body.front {
     background-attachment: fixed;
     background-position: top center;
     background-size: cover;
+    border-radius: 40px;
+    padding: 40px;
+
     .well {
       background: rgba(245, 245, 245, 0.9);
       border: 1px solid rgba(227, 227, 227, 0.9);
@@ -15,12 +18,7 @@ body.front {
       text-align:center;
     }
 
-    @media (min-width: @screen-xs-min) {
-      border-radius: 40px;
-      padding: 40px;
-    }
-
-    @media (min-width: @screen-xs-min) {
+    @media (min-width: @screen-sm-min) {
       background-image: url(../images/house750.jpg);
       border-radius: 50px;
       padding: 50px;
@@ -47,7 +45,7 @@ body.front {
       background-size: cover;
       padding-top: 20px;
 
-      @media (min-width: @screen-xs-min) {
+      @media (min-width: @screen-sm-min) {
         background-image: url(../images/mural750.jpg);
       }
 
@@ -106,7 +104,13 @@ body.front {
     margin-top: 20px;
   }
 
+  
   #block-search-api-page-search-form {
     width:90%;
+    @media (max-width: @screen-xs-max) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
+  
 }

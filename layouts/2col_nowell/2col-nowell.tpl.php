@@ -15,14 +15,14 @@
     $panelcontentfilled = array_values(array_filter($panelcontent));
   ?>
   <div class="row col2-nowell-mid">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-sm-6 col-xs-12">
       <div class="col2-nowell-mid-left">
         <?php if (@$panelcontentfilled[0]):
           print $panelcontentfilled[0];
           endif; ?>
       </div>
     </div>
-    <div class="col-md-6 col-sm-12">
+    <div class="col-sm-6 col-xs-12">
       <div class="col2-nowell-mid-right">
         <?php if (@$panelcontentfilled[1]):
           print $panelcontentfilled[1];

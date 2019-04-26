@@ -12,7 +12,13 @@ jQuery(function ($) {
             $('body').removeAttr("style");
             //remove auto dropdown from main navbar
             $('.navbar #main-navbar .dropdown').off('mouseenter mouseleave', mouseOver, mouseOut);
-            if (!parseInt($('#main-navbar').height(), 10)) {
+            if (parseInt($('#main-navbar').height(), 10)) {
+                if (parseInt($(window).width(), 10) < 480) {
+                  $('body').attr("style", "padding-top: 39px !important;");
+                } else {
+                  $('body').attr("style", "padding-top: 59px !important;");
+                }
+            } else {
                 $('body').attr("style", "padding-top: 0px !important;");
             }
         } else {
@@ -33,7 +39,13 @@ jQuery(function ($) {
             $('body').removeAttr("style");
             //remove auto dropdown from main navbar
             $('.navbar #main-navbar .dropdown').off('mouseentermouseleave', mouseOver, mouseOut);
-            if (!parseInt($('#main-navbar').height(), 10)) {
+            if (parseInt($('#main-navbar').height(), 10)) {
+                if (parseInt($(window).width(), 10) < 480) {
+                  $('body').attr("style", "padding-top: 39px !important;");
+                } else {
+                  $('body').attr("style", "padding-top: 59px !important;");
+                }
+            } else {
                 $('body').attr("style", "padding-top: 0px !important;");
             }
         } else {

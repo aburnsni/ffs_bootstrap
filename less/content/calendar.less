@@ -26,6 +26,31 @@
     }
 }
 
+//  Fixes for readability
+
+.calendar-calendar {
+  td {
+    color: #aaa;
+
+    div.calendar {
+      font-size: small;
+      a, span.date-display-single, span.date-display-start, span.date-display-end, span.date-display-separator
+      {
+        font-weight: inherit;
+        color: #aaa;
+      }
+    }
+  }
+  .month-view .full td.multi-day .inner .monthview .continues,
+  .month-view .full td.multi-day .inner .monthview .cutoff,
+  .week-view .full td.multi-day .inner .weekview .continues,
+  .week-view .full td.multi-day .inner .weekview .cutoff {
+    width: 13px;
+    padding-left: 3px;
+    padding-top: 2px;
+  }
+}
+
 // Remove background for calendar for-next blocks
 .view .date-nav-wrapper {
     .date-nav {

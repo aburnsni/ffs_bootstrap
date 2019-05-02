@@ -40,7 +40,7 @@ body.front {
       // background-position: center;
       // background-size: cover;
       padding-top: 20px;
-      min-height: 766px;
+      min-height: 796px;
 
       @media (min-width: @screen-sm-min) {
         // background-image: url(../images/mural750.jpg);
@@ -63,10 +63,20 @@ body.front {
 
   #views-bootstrap-media-1 {
     padding-top: @padding-large-vertical;
+    .media {
+      padding: 3px;
+      border-radius: 10px;
+    }
     .media-body {
       .btn {
         margin-top:8px;
       }
+    }
+    .media:hover{
+      transition-duration: .5s;
+      transform: translate(0px,-3px);
+      box-shadow: 0 15px 45px -10px rgba(10,16,34,.3);
+      background-color: rgba(245, 245, 245, 0.4);
     }
   }
   .pane-find-and-search {
@@ -110,4 +120,10 @@ body.front {
     }
   }
   
+}
+
+#views-bootstrap-list-group-1 .list-group-item:hover{
+  transition-duration: .5s;
+  transform: translate(0px,-5px);
+  box-shadow: 0 15px 45px -10px rgba(10,16,34,.3);
 }

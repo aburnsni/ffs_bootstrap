@@ -1,12 +1,26 @@
 #views-bootstrap-media-1 {
     .img-responsive {
-        border-radius: 6px;
+        border-radius: @border-radius-large;
     }
+    .date0 {
+        display: none;
+    }
+    .media {
+        padding: @padding-large-vertical;
+        border-radius: 12px;
+    }
+}
+
+#views-bootstrap-media-1 .media:hover {
+    transition-duration: .5s;
+    transform: translate(0px,-3px);
+    box-shadow: 0 15px 45px -10px rgba(10,16,34,.3);
+    background-color: rgba(245, 245, 245, 0.4);
 }
 
 .tagclouds-term {
     .badge {
-        margin-left: 5px;
+        margin-left: @padding-xs-horizontal;
     }
 } 
 h4.media-heading {

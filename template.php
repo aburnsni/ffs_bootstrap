@@ -14,7 +14,6 @@ function fleming_colorbox_node_caption($variables){
   return ( $variables['location'] == 'before' ) ? $markup . $variables['item'] : $variables['item'] . $markup;
 }
 
-
 /**
  * Returns HTML for an Colorbox image field formatter.
  *
@@ -84,8 +83,8 @@ function fleming_colorbox_image_formatter($variables) {
       elseif (!empty($image['alt'])) {
         $caption = $image['alt'];
       }
-      elseif (!empty($image['filename'])) {
-        $caption = $image['filename'];
+      elseif (!empty($image['path'])) {
+        $caption = $image['path'];
       }
       elseif (!empty($entity_title)) {
         $caption = $entity_title;

@@ -83,12 +83,6 @@ function fleming_colorbox_image_formatter($variables) {
       elseif (!empty($image['alt'])) {
         $caption = $image['alt'];
       }
-      elseif (!empty($image['path'])) {
-        $caption = $image['path'];
-      }
-      elseif (!empty($entity_title)) {
-        $caption = $entity_title;
-      }
       else {
         $caption = '';
       }

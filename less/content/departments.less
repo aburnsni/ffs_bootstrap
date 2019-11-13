@@ -33,3 +33,21 @@ h4.media-heading {
 .media-body .article-body {
   margin-bottom: @padding-small-vertical;
 }
+
+.img-thumbnail {
+  padding: 8px;
+}
+
+.cb-outer {
+  position: relative;
+  margin: @padding-large-vertical auto;
+  border-radius: @border-radius-large;
+}
+
+.cb-outer:hover {
+    transition-duration: .5s;
+    transform: scale(1.05);
+    box-shadow: 0 15px 45px -10px rgba(10,16,34,.3);
+    background-color: rgba(245, 245, 245, 0.4);
+    z-index: 99;
+}

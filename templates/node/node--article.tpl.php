@@ -65,10 +65,10 @@
           print render($content['field_file']);
           print render($content['field_department']);
         } else {                                                // Only 1 image in gallery
-          if (!($node->field_image_gallery['und'][0]['is_default'])) {  //  Is it default image
+          if (!($node->field_image_gallery['und'][0]['is_default'])) {  //  If it is NOT the default image
             $img_url = image_style_url('article_image', $node->field_image_gallery['und'][0]['uri']);
             $img_alt = $node->field_image_gallery['und'][0]['title'];
-      ?>
+            ?>
             <div class="media">
               <div class="media-left">
                 <a href="<?php print file_create_url($node->field_image_gallery['und'][0]['uri']); ?>" title="<?php print $img_alt; ?>" class="colorbox" data-cbox-img-attrs="{&quot;title&quot;: &quot;<?php print $img_alt; ?>&quot;, &quot;alt&quot;: &quot;<?php print $img_alt; ?>&quot;}">
@@ -76,13 +76,13 @@
                 </a> 
               </div>
               <div class="media-body">
-                <?php print render($content['body']); ?>
+                <div class="article-body"><?php print render($content['body']); ?></div>
                 <?php print render($content['field_file']); ?>
+                <?php print render($content['field_department']); ?>
               </div>
-              <?php print render($content['field_department']); ?>
             </div>
-      <?php
-          } else {
+            <?php
+          } else {  // Only default image
             print render($content['body']);
             print render($content['field_file']);
             print render($content['field_department']);

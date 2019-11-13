@@ -35,7 +35,7 @@ function fleming_colorbox_node_caption($variables){
  *
  * @ingroup themeable
  */
-function theme_colorbox_image_formatter($variables) {
+function fleming_colorbox_image_formatter($variables) {
   static $gallery_token = NULL;
   $item = $variables['item'];
   $entity_type = $variables['entity_type'];
@@ -45,7 +45,7 @@ function theme_colorbox_image_formatter($variables) {
 
   $image = array(
     'path' => $item['uri'],
-    'alt' => isset($item['alt']) ? $item['alt'] : '',
+    'alt' => isset($item['title']) ? $item['title'] : '',
     'title' => isset($item['title']) ? $item['title'] : '',
     'style_name' => $settings['colorbox_node_style'],
   );
@@ -188,7 +188,7 @@ function theme_colorbox_image_formatter($variables) {
  *
  * @ingroup themeable
  */
-function theme_colorbox_imagefield($variables) {
+function fleming_colorbox_imagefield($variables) {
   $class = array('colorbox');
 
   if ($variables['image']['style_name'] == 'hide') {

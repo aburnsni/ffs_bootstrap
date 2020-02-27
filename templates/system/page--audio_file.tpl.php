@@ -63,6 +63,16 @@
       </div>
     </div>
   <?php endif; ?>
+  <?php if (!empty($page['content-bottom-left']) || !empty($page['content-bottom-right'])): ?>
+    <div class="row">
+      <div class="col-sm-6">
+        <?php print render($page['content-bottom-left']); ?>
+      </div>
+      <div class="col-sm-6">
+        <?php print render($page['content-bottom-right']); ?>
+      </div>
+    </div>
+  <?php endif; ?>
 </div>
 <footer class="footer container">
   <div class="col-md-4 col-sm-12">

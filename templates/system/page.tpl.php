@@ -102,6 +102,16 @@
       </div>
     </div>
   <?php endif; ?>
+  <?php if (!empty($page['content-bottom-left']) || !empty($page['content-bottom-right'])): ?>
+    <div class="row">
+      <div class="col-sm-6">
+        <?php print render($page['content-bottom-left']); ?>
+      </div>
+      <div class="col-sm-6">
+        <?php print render($page['content-bottom-right']); ?>
+      </div>
+    </div>
+  <?php endif; ?>
 </div>
 <?php if ($user->uid > 0) { ?>
   <footer class="footer container">

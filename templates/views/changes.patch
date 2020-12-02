@@ -1,0 +1,22 @@
+1a2
+> 
+3c4,6
+<  * @file views-bootstrap-list-group-plugin-style.tpl.php
+---
+>  * @file
+>  * views-bootstrap-list-group-plugin-style.tpl.php
+>  *
+9c12
+< 
+---
+> <?php print $panels ? '<div class="panel panel-default">' : '' ?>
+10a14
+>   <?php print $panels ? '<div class="panel-heading">' : '' ?>
+11a16
+>   <?php print $panels ? '</div>' : '' ?>
+20c25
+<           'class' => 'list-group-item container-fluid',
+---
+>           'class' => 'list-group-item',
+29a35
+> <?php print $panels ? '</div>' : '' ?>
